@@ -1,17 +1,31 @@
-import logo from './background.gif';
+
 import './index.css';
 import './components/styles.css';
 
-import Menu from './components/Menu';
-import Textbox from './components/Textbox';
-import Titlebox from './components/Titlebox';
+import './index.css';
+import './components/styles.css';
+import About from './components/About'
+import Photography from './components/Photography';
+import ContactMe from './components/ContactMe';
+import Illustrations from './components/Illustrations';
+import Home from './components/Home';
+import {Routes, Route, Link} from 'react-router-dom'
+
 
 
 function App() {
   return (
     <div className="App">
+      
+      <Routes> 
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/About" element={<About/>} />
+        <Route exact path="/Photography" element={<Photography/>} />
+        <Route exact path="/ContactMe" element={<ContactMe/>} />
+        <Route exact path="/Illustrations" element={<Illustrations/>} />
+      </Routes>
 
-      <header className="App-header">
+      {/* <header className="App-header">
         <div class="container" >
         <Menu/>
       
@@ -27,7 +41,7 @@ Ut nec odio mollis, ultricies nisl et, porta libero. Etiam et malesuada sapien. 
         </div>
         <img src={logo} className="backgroundimg" alt="logo" />
         
-      </header>
+      </header> */}
     </div>
   );
 }
